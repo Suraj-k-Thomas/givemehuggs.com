@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+
+/* =========================================================
+   Design tokens — extracted from the Give me Huggs app UI
+   ========================================================= */
+@theme {
+  /* brand */
+  --color-coral: #f2545b;
+  --color-coral-dark: #dc434a;
+  --color-coral-soft: #fb9c92;
+  --color-coral-tint: #ffeceb;
+
+  --color-brandblue: #4a90d9;
+  --color-brandblue-dark: #3a79bc;
+  --color-brandblue-soft: #a9cdef;
+  --color-brandblue-tint: #eaf2fc;
+
+  --color-navy: #1b2a4a;
+  --color-body: #5a6580;
+  --color-faint: #8b93a8;
+
+  /* surfaces — the page is plain white; separation comes from whitespace,
+     hairline borders and the divider tone, never from a color wash */
+  --color-divider: #f5f5f5;
+  --color-hairline: #ebedf2;
+
+  /* accents used inside the app screen */
+  --color-gold: #e8a51b;
+  --color-gold-light: #ffd76a;
+  --color-violet: #7052ea;
+  --color-violet-soft: #b9a6f7;
+
+  /* type */
+  --font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* shadow scale — soft, diffuse, fintech-ish */
+  --shadow-soft: 0 1px 2px rgb(27 42 74 / 0.04), 0 8px 24px rgb(27 42 74 / 0.06);
+  --shadow-lift: 0 2px 6px rgb(27 42 74 / 0.05), 0 18px 40px rgb(27 42 74 / 0.1);
+  --shadow-phone: 0 30px 70px rgb(27 42 74 / 0.22);
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: #ffffff;
+    color: var(--color-navy);
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    line-height: 1.14;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brandblue);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Give me Huggs — Send a little love to the creators you love</title>
+<meta name="description" content="Give me Huggs is an online platform where fans send small cash gifts to their favourite creators, artists, writers and developers. Quick, personal and secure.">
+<meta name="theme-color" content="#f2564c" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141826" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/logo.svg">
+<link rel="canonical" href="https://givemehuggs.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Give me Huggs">
+<meta property="og:title" content="Give me Huggs — Spreading love">
+<meta property="og:description" content="Send a little love. Small cash gifts for the creators, artists, writers and developers whose work you enjoy.">
+<meta property="og:url" content="https://givemehuggs.com/">
+<meta property="og:image" content="https://givemehuggs.com/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Give me Huggs",
+  "url": "https://givemehuggs.com/",
+  "logo": "https://givemehuggs.com/assets/img/logo.svg",
+  "slogan": "Spreading love",
+  "description": "An online platform where fans send small cash gifts to their favourite creators, artists, writers and developers."
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ icon sprite ============ -->
+<svg class="sprite" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.9a5.4 5.4 0 0 0-7.7 0L12 6l-1.1-1.1a5.4 5.4 0 0 0-7.7 7.7l8.8 8.8 8.8-8.8a5.4 5.4 0 0 0 0-7.7Z"/></symbol>
+    <symbol id="i-heart-hand" viewBox="0 0 24 24"><path d="M17.6 4.6a3.4 3.4 0 0 0-4.8 0l-.8.8-.8-.8a3.4 3.4 0 0 0-4.8 4.8L12 15l5.6-5.6a3.4 3.4 0 0 0 0-4.8Z"/><path d="M3 17.5 6.5 21h9l4-3.5"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><path d="M20 12v8.2a.8.8 0 0 1-.8.8H4.8a.8.8 0 0 1-.8-.8V12"/><rect x="2.5" y="7" width="19" height="5" rx="1.2"/><path d="M12 21V7"/><path d="M12 7H7.8A2.4 2.4 0 1 1 9.4 2.6C11.2 3.4 12 7 12 7Z"/><path d="M12 7h4.2a2.4 2.4 0 1 0-1.6-4.4C12.8 3.4 12 7 12 7Z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.2 2.2 4.5 13.6h5.6l-1.3 8.2 8.7-11.4h-5.6l1.3-8.2Z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-1.8a4 4 0 0 0-4-4H6.5a4 4 0 0 0-4 4V21"/><circle cx="9.2" cy="7.5" r="3.6"/><path d="M21.5 21v-1.8a4 4 0 0 0-3-3.9"/><path d="M16.2 3.6a3.6 3.6 0 0 1 0 7"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.8"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></symbol>
+    <symbol id="i-user-off" viewBox="0 0 24 24"><circle cx="9.5" cy="8" r="3.8"/><path d="M2.5 21a7.2 7.2 0 0 1 11.6-5.2"/><path d="m17 16.5 4.5 4.5"/><path d="m21.5 16.5-4.5 4.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 21.5s7.8-3.6 7.8-9.5V5.3L12 2.5 4.2 5.3v6.7c0 5.9 7.8 9.5 7.8 9.5Z"/><path d="m8.8 11.8 2.4 2.4 4-4.4"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18.2 8.6a6.2 6.2 0 1 0-12.4 0c0 6.6-2.8 8.6-2.8 8.6h18s-2.8-2-2.8-8.6"/><path d="M13.8 20.6a2.1 2.1 0 0 1-3.6 0"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.4"/><path d="M2.6 12h18.8"/><path d="M12 2.6c2.6 2.6 4 5.9 4 9.4s-1.4 6.8-4 9.4c-2.6-2.6-4-5.9-4-9.4s1.4-6.8 4-9.4Z"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M21.5 6.5 13.5 14.5l-4.5-4.5-6.5 6.5"/><path d="M15.8 6.5h5.7v5.7"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 10.2 12 3.2l8.5 7v10a.8.8 0 0 1-.8.8h-4.9v-6h-5.6v6H4.3a.8.8 0 0 1-.8-.8Z"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2"/><path d="m8.4 12.3 2.6 2.6 4.6-5.2"/></symbol>
+    <symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="6.8" cy="6.8" r="2.6"/><circle cx="17.2" cy="17.2" r="2.6"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24"><path d="M2.6 18.4h18.8l-1.9-9.6-4.9 3.7L12 4.6l-2.6 7.9-4.9-3.7-1.9 9.6Z"/></symbol>
+    <symbol id="i-stack" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8.2" ry="3.2"/><path d="M3.8 6v6c0 1.8 3.7 3.2 8.2 3.2s8.2-1.4 8.2-3.2V6"/><path d="M3.8 12v6c0 1.8 3.7 3.2 8.2 3.2s8.2-1.4 8.2-3.2v-6"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M16.5 3.2h4.8V8"/><path d="M3 21 21.3 3.2"/><path d="M21.3 16v4.8h-4.8"/><path d="m14.8 14.8 6.5 6"/><path d="m3 3.2 5.6 5.2"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 14.8a2.2 2.2 0 0 1-2.2 2.2H8.3L3 21V5.2A2.2 2.2 0 0 1 5.2 3h13.6A2.2 2.2 0 0 1 21 5.2Z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8.6 18-6-6 6-6"/><path d="m15.4 6 6 6-6 6"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20h4.2L20 8.2 15.8 4 4 15.8Z"/><path d="m14.4 5.4 4.2 4.2"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 21.4a9.4 9.4 0 1 1 9.4-9.4c0 2.6-2.1 3.6-3.9 3.6h-1.9a2.4 2.4 0 0 0-1.5 4.3 1.6 1.6 0 0 1-1 1.5 9.6 9.6 0 0 1-1.1 0Z"/><circle cx="8.4" cy="9.6" r="1.1"/><circle cx="13" cy="7.4" r="1.1"/></symbol>
+    <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M4 15.4V12a8 8 0 0 1 16 0v3.4"/><rect x="2.4" y="14.2" width="4.6" height="7" rx="2"/><rect x="17" y="14.2" width="4.6" height="7" rx="2"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8.4 4.6 19.6 12 8.4 19.4Z"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2.8 13.9 9 20 10.9 13.9 12.8 12 19 10.1 12.8 4 10.9 10.1 9Z"/><path d="M18.6 16.4l.8 2.4 2.4.8-2.4.8-.8 2.4-.8-2.4-2.4-.8 2.4-.8Z"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4.5 12h15"/><path d="m13.5 6 6 6-6 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12"/><path d="m18 6-12 12"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 13.4A9.2 9.2 0 1 1 10.6 3a7.2 7.2 0 0 0 10.4 10.4Z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ header ============ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top">
+      <img class="brand-mark" src="assets/img/logo.svg" alt="" width="44" height="44" decoding="async">
+      <span class="brand-text">
+        <span class="brand-name">Give me <span class="grad">Huggs</span></span>
+        <span class="brand-tag">Spreading love <svg class="ico ico-xs coral" aria-hidden="true"><use href="#i-heart"/></svg></span>
+      </span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Main">
+      <ul>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#creators">For creators</a></li>
+        <li><a href="#market">Why now</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="#">Log in</a>
+        <a class="btn btn-primary" href="#cta">Send Huggs <svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></a>
+      </div>
+    </nav>
+
+    <div class="header-tools">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="ico ico-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="ico ico-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <svg class="ico ico-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="ico ico-shut" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ hero ============ -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"><span class="blob blob-pink"></span><span class="blob blob-blue"></span></div>
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg> Spreading love, one Huggs at a time</p>
+        <h1>Send a little love<br><span class="grad">to creators you love.</span></h1>
+        <p class="lead">
+          <strong>Give me Huggs</strong> is an online platform where fans send small cash gifts to
+          their favourite creators, artists, writers and developers.
+        </p>
+        <p class="lead lead-2">
+          Instead of traditional tipping, it gives supporters a quick and easy way to show
+          appreciation — and send a little love to the people whose work they enjoy.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#cta">Send Huggs <svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></a>
+          <a class="btn btn-outline btn-lg" href="#creators">Join as a creator</a>
+        </div>
+
+        <ul class="trust">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg> Encrypted payments</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg> Sends in seconds</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg> Works worldwide</li>
+        </ul>
+      </div>
+
+      <!-- phone mock -->
+      <div class="hero-visual">
+        <div class="phone" role="img" aria-label="The Give me Huggs app: pick a creator, choose an amount, add a message, and send Huggs instantly.">
+          <div class="phone-body" aria-hidden="true">
+            <span class="phone-notch"></span>
+            <div class="screen">
+              <div class="app-bar">
+                <svg class="ico ico-sm muted" aria-hidden="true"><use href="#i-menu"/></svg>
+                <span class="app-title">Give me <span class="blue">Huggs</span></span>
+                <span class="bell"><svg class="ico ico-sm muted" aria-hidden="true"><use href="#i-bell"/></svg><i class="dot"></i></span>
+              </div>
+
+              <p class="app-h">Support your<br>favourite creators <svg class="ico ico-xs coral" aria-hidden="true"><use href="#i-heart"/></svg></p>
+
+              <ul class="avatars">
+                <li><span class="av av-1"><svg class="ico" aria-hidden="true"><use href="#i-palette"/></svg></span><b>Artist</b></li>
+                <li><span class="av av-2"><svg class="ico" aria-hidden="true"><use href="#i-pencil"/></svg></span><b>Writer</b></li>
+                <li><span class="av av-3"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span><b>Developer</b></li>
+                <li><span class="av av-4"><svg class="ico" aria-hidden="true"><use href="#i-headphones"/></svg></span><b>Musician</b></li>
+              </ul>
+
+              <div class="send-card">
+                <p class="send-title">Send a little love</p>
+                <div class="gift">
+                  <svg viewBox="0 0 120 100" class="gift-svg" aria-hidden="true">
+                    <ellipse cx="60" cy="88" rx="34" ry="6" fill="rgba(242,86,76,.12)"/>
+                    <rect x="24" y="44" width="72" height="42" rx="6" fill="#f4675c"/>
+                    <rect x="24" y="44" width="72" height="10" rx="4" fill="#fb8b80"/>
+                    <rect x="53" y="44" width="14" height="42" fill="#ffb1a8"/>
+                    <path d="M60 44c-6-10-22-16-26-8s10 10 26 8Z" fill="#fb9c92"/>
+                    <path d="M60 44c6-10 22-16 26-8s-10 10-26 8Z" fill="#fb9c92"/>
+                    <circle cx="60" cy="40" r="6" fill="#ffb1a8"/>
+                  </svg>
+                  <span class="spark s1"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+                  <span class="spark s2"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+                  <span class="coin c1">$</span>
+                  <span class="coin c2">$</span>
+                </div>
+                <div class="amounts">
+                  <span>$1</span><span class="on">$5</span><span>$10</span><span>$25</span>
+                </div>
+                <div class="fake-input">Add a message (optional)</div>
+                <div class="send-btn">Send Huggs <svg class="ico ico-sm" aria-hidden="true"><use href="#i-heart"/></svg></div>
+              </div>
+
+              <nav class="tabbar">
+                <span class="on"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg><b>Home</b></span>
+                <span><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg><b>Explore</b></span>
+                <span class="fab"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+                <span><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><b>Activity</b></span>
+                <span><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg><b>Profile</b></span>
+              </nav>
+            </div>
+          </div>
+
+          <span class="float f1" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+          <span class="float f2" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+          <span class="float f3" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+          <span class="float f4 is-coin" aria-hidden="true">$</span>
+          <span class="float f5 is-coin" aria-hidden="true">$</span>
+          <span class="float f6 is-gift" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- value chips -->
+    <div class="container">
+      <ul class="chips">
+        <li><span class="chip-ico pink"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span><b>Show<br>appreciation</b></li>
+        <li><span class="chip-ico blue"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg></span><b>Send<br>cash gifts</b></li>
+        <li><span class="chip-ico violet"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg></span><b>Quick<br>&amp; easy</b></li>
+        <li><span class="chip-ico green"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span><b>Support<br>creators</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ mission ============ -->
+  <section class="mission" aria-labelledby="mission-h">
+    <div class="container mission-inner">
+      <div class="mission-copy">
+        <span class="mission-badge"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+        <p><strong id="mission-h">Our mission is simple:</strong> to build a world where appreciation is
+          effortless and every creator feels valued.</p>
+      </div>
+      <ul class="mission-list">
+        <li><svg class="ico coral" aria-hidden="true"><use href="#i-users"/></svg><span>Fans support<br>creators</span></li>
+        <li><svg class="ico blue" aria-hidden="true"><use href="#i-trend"/></svg><span>Creators<br>earn more</span></li>
+        <li><svg class="ico violet" aria-hidden="true"><use href="#i-shield"/></svg><span>Safe &amp; secure<br>transactions</span></li>
+        <li><svg class="ico green" aria-hidden="true"><use href="#i-globe"/></svg><span>Spreading love<br>worldwide</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ how it works ============ -->
+  <section class="section" id="how" aria-labelledby="how-h">
+    <div class="container">
+      <p class="kicker"><span class="num">01</span> How it works</p>
+      <h2 class="h2" id="how-h">Three taps. That's the whole thing.</h2>
+      <p class="section-lead">No accounts to wrangle, no monthly commitment, no awkward maths.
+        Find the person whose work you enjoy and send them something real.</p>
+
+      <ol class="steps">
+        <li>
+          <span class="step-n">1</span>
+          <h3>Find your creator</h3>
+          <p>Search by name or open the link they shared. Artists, writers, developers,
+            musicians — anyone doing work you value.</p>
+        </li>
+        <li>
+          <span class="step-n">2</span>
+          <h3>Pick an amount, add a note</h3>
+          <p>$1 to say hello, $25 to say thank you properly. Attach a message or an emoji so
+            it lands as more than a number.</p>
+        </li>
+        <li>
+          <span class="step-n">3</span>
+          <h3>They get it instantly</h3>
+          <p>Your Huggs arrives with a real-time notification, and your message arrives with it.
+            That's the whole flow.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ problem / solution ============ -->
+  <section class="section section-tint" id="problem" aria-labelledby="problem-h">
+    <div class="container">
+      <p class="kicker"><span class="num">02</span> The problem &amp; our solution</p>
+      <h2 class="h2" id="problem-h">The old way doesn't <span class="coral">feel personal.</span></h2>
+      <p class="section-lead">Traditional tipping platforms are often complicated, take a cut, and
+        lack the personal connection between fans and creators.</p>
+
+      <div class="ps-grid">
+        <div class="panel panel-problem">
+          <h3 class="panel-h">The problems</h3>
+          <ul class="ps-list">
+            <li><span class="ps-ico"><svg class="ico" aria-hidden="true"><use href="#i-stack"/></svg></span>
+              <b>High fees &amp; hidden charges</b><span>Creators lose a slice of every gift to costs nobody explained.</span></li>
+            <li><span class="ps-ico"><svg class="ico" aria-hidden="true"><use href="#i-shuffle"/></svg></span>
+              <b>Complicated process</b><span>Sign-ups, redirects and checkout forms between wanting to give and giving.</span></li>
+            <li><span class="ps-ico"><svg class="ico" aria-hidden="true"><use href="#i-user-off"/></svg></span>
+              <b>Less personal connection</b><span>A transaction lands, but the person behind it stays invisible.</span></li>
+            <li><span class="ps-ico"><svg class="ico" aria-hidden="true"><use href="#i-trend"/></svg></span>
+              <b>Limited ways to show appreciation</b><span>One button, one amount, no room for anything warmer.</span></li>
+          </ul>
+        </div>
+
+        <div class="panel panel-solution">
+          <h3 class="panel-h">Our solution</h3>
+          <ul class="ps-list">
+            <li><span class="ps-ico"><svg class="ico" aria-hidden="true"><use href="#i-heart-hand"/></svg></span>
+              <b>Simple &amp; fast</b><span>Send support in just a few taps, from any device.</span></li>
+            <li><span class="ps-ico"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <b>Low fees</b><span>We keep it fair so creators keep more of what they earn.</span></li>
+            <li><span class="ps-ico"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+              <b>Personal connection</b><span>Built to bring fans and creators closer, not just move money.</span></li>
+            <li><span class="ps-ico"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg></span>
+              <b>More ways to show love</b><span>Cash gifts, messages, monthly support and special gifts.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="banner-strip"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg>
+        Give me Huggs makes supporting simple, personal and meaningful.</p>
+    </div>
+  </section>
+
+  <!-- ============ features ============ -->
+  <section class="section" id="features" aria-labelledby="features-h">
+    <div class="container">
+      <p class="kicker"><span class="num">03</span> Our platform &amp; features</p>
+      <h2 class="h2" id="features-h">Powerful features.<br><span class="coral">Simple experience.</span></h2>
+      <p class="section-lead">Give me Huggs makes it effortless for <b class="coral">fans</b> to show
+        appreciation and for <b class="blue">creators</b> to grow their impact and income.</p>
+
+      <ul class="cards">
+        <li class="card">
+          <span class="card-ico pink"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg></span>
+          <h3>Quick &amp; easy</h3>
+          <p>Send cash gifts in just a few taps. Fast, smooth and hassle-free.</p>
+        </li>
+        <li class="card">
+          <span class="card-ico blue"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+          <h3>Show genuine appreciation</h3>
+          <p>Express your love and support with personalised messages along with your gift.</p>
+        </li>
+        <li class="card">
+          <span class="card-ico green"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span>
+          <h3>Secure &amp; trusted</h3>
+          <p>Safe payments, encrypted transactions and privacy you can rely on.</p>
+        </li>
+        <li class="card">
+          <span class="card-ico violet"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span>
+          <h3>Stronger connections</h3>
+          <p>Build deeper relationships between fans and creators through meaningful support.</p>
+        </li>
+        <li class="card">
+          <span class="card-ico amber"><svg class="ico" aria-hidden="true"><use href="#i-trend"/></svg></span>
+          <h3>More ways to earn</h3>
+          <p>Creators earn through fan support, messages, monthly support and special gifts.</p>
+        </li>
+        <li class="card">
+          <span class="card-ico pink"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg></span>
+          <h3>Custom gifts &amp; messages</h3>
+          <p>Add a personal touch with messages, emojis and special gift animations.</p>
+        </li>
+        <li class="card">
+          <span class="card-ico blue"><svg class="ico" aria-hidden="true"><use href="#i-bell"/></svg></span>
+          <h3>Real-time notifications</h3>
+          <p>Creators get instant alerts whenever they receive Huggs from their fans.</p>
+        </li>
+        <li class="card">
+          <span class="card-ico green"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></span>
+          <h3>Global community</h3>
+          <p>A platform that brings fans and creators together from anywhere in the world.</p>
+        </li>
+      </ul>
+
+      <p class="banner-strip banner-soft"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg>
+        Built to make supporting <b class="coral">simple</b>, <b class="violet">meaningful</b> and
+        <b class="blue">joyful</b> — for everyone.</p>
+    </div>
+  </section>
+
+  <!-- ============ for creators ============ -->
+  <section class="section section-tint" id="creators" aria-labelledby="creators-h">
+    <div class="container creators-grid">
+      <div>
+        <p class="kicker"><span class="num">04</span> For creators</p>
+        <h2 class="h2" id="creators-h">Keep more of what<br><span class="blue">your work earns.</span></h2>
+        <p class="section-lead">Set up a page, share one link, and let the people who already love
+          your work support it directly. No gatekeeping, no minimum following.</p>
+        <ul class="ticks">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg>One shareable link for every platform you post on</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg>Instant alerts, with the supporter's message attached</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg>One-off Huggs or recurring monthly support</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg>Transparent fees, shown before you ever get paid</li>
+        </ul>
+        <a class="btn btn-primary btn-lg" href="#cta">Create your page <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+
+      <div class="loop" aria-labelledby="loop-h">
+        <h3 class="loop-h" id="loop-h">A thriving ecosystem</h3>
+        <ul class="loop-nodes">
+          <li class="node node-fans">
+            <span class="node-ico pink"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <b>Fans</b><span>Show love and support</span>
+          </li>
+          <li class="node node-creators">
+            <span class="node-ico blue"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></span>
+            <b>Creators</b><span>Grow audience and income</span>
+          </li>
+          <li class="node node-platform">
+            <span class="node-ico green"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+            <b>Platform</b><span>Enables connections and transactions</span>
+          </li>
+        </ul>
+        <p class="loop-note">Everyone gains when the loop turns: more love, more value, more impact.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    ============================================================
+    INVESTOR BLOCK — business model + market opportunity.
+    These two sections carry forward-looking projections from the
+    pitch deck. Delete from here to the "END INVESTOR BLOCK"
+    comment for a purely consumer-facing site.
+    ============================================================
+  -->
+  <section class="section" id="model" aria-labelledby="model-h">
+    <div class="container">
+      <p class="kicker"><span class="num">05</span> Business model</p>
+      <h2 class="h2" id="model-h">Sustainable growth.<br><span class="coral">Shared value.</span></h2>
+      <p class="section-lead">Give me Huggs creates value for everyone in the ecosystem while building
+        a scalable, sustainable revenue model.</p>
+
+      <ul class="cards cards-3">
+        <li class="card">
+          <span class="card-ico pink"><svg class="ico" aria-hidden="true"><use href="#i-percent"/></svg></span>
+          <h3>Transaction fee</h3>
+          <p>A small fee on each Huggs sent.</p>
+          <p class="card-metric coral">5–10% <span>per transaction</span></p>
+        </li>
+        <li class="card">
+          <span class="card-ico blue"><svg class="ico" aria-hidden="true"><use href="#i-crown"/></svg></span>
+          <h3>Premium features</h3>
+          <p>Optional premium tools for creators and fans.</p>
+          <p class="card-metric blue">Subscription <span>monthly / annual</span></p>
+        </li>
+        <li class="card">
+          <span class="card-ico green"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg></span>
+          <h3>Boost &amp; promotions</h3>
+          <p>Creators can promote their profile and campaigns.</p>
+          <p class="card-metric green">Pay-per-promo <span>model</span></p>
+        </li>
+      </ul>
+
+      <div class="data-grid">
+        <figure class="chart-card">
+          <figcaption>
+            <h3 class="chart-title">Revenue growth projection</h3>
+            <p class="chart-sub">Modelled platform revenue, Year 1 – Year 5 (USD)</p>
+          </figcaption>
+          <div class="chart" data-chart="revenue"></div>
+          <div class="chart-foot">
+            <button class="link-btn" type="button" data-table-toggle="revenue-table" aria-expanded="false" aria-controls="revenue-table">View data table</button>
+            <p class="chart-note">Forward-looking projection, not a guarantee.</p>
+          </div>
+          <div class="table-wrap" id="revenue-table" hidden></div>
+        </figure>
+
+        <ul class="stat-tiles">
+          <li>
+            <span class="stat-ico pink"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <span class="stat-label">Users by year 5</span>
+            <span class="stat-value">2.5M+</span>
+          </li>
+          <li>
+            <span class="stat-ico blue"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></span>
+            <span class="stat-label">Creators by year 5</span>
+            <span class="stat-value">150K+</span>
+          </li>
+          <li>
+            <span class="stat-ico green"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+            <span class="stat-label">Gift volume by year 5</span>
+            <span class="stat-value">$283M+</span>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="mini-row">
+        <li><svg class="ico coral" aria-hidden="true"><use href="#i-stack"/></svg><span>Low cost model</span></li>
+        <li><svg class="ico blue" aria-hidden="true"><use href="#i-trend"/></svg><span>Scalable platform</span></li>
+        <li><svg class="ico violet" aria-hidden="true"><use href="#i-heart"/></svg><span>High lifetime value</span></li>
+        <li><svg class="ico green" aria-hidden="true"><use href="#i-percent"/></svg><span>Strong unit economics</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="market" aria-labelledby="market-h">
+    <div class="container">
+      <p class="kicker"><span class="num">06</span> Market opportunity</p>
+      <h2 class="h2" id="market-h">A massive market.<br><span class="coral">Real human connection.</span></h2>
+      <p class="section-lead">The creator economy is booming, and fans are looking for more meaningful
+        ways to support the people they love. Give me Huggs sits in the heart of that movement.</p>
+
+      <ul class="big-stats">
+        <li>
+          <span class="stat-ico violet"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span>
+          <b>200M+</b><span>Creators worldwide, and growing</span>
+        </li>
+        <li>
+          <span class="stat-ico blue"><svg class="ico" aria-hidden="true"><use href="#i-trend"/></svg></span>
+          <b>$250B+</b><span>Creator economy market size by 2027</span>
+        </li>
+        <li>
+          <span class="stat-ico green"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></span>
+          <b>1B+</b><span>Fans globally, actively engaging</span>
+        </li>
+      </ul>
+
+      <div class="data-grid">
+        <figure class="chart-card">
+          <figcaption>
+            <h3 class="chart-title">Global creator economy market size</h3>
+            <p class="chart-sub">USD, 2023–2025 reported and 2027 projected</p>
+          </figcaption>
+          <div class="chart" data-chart="market"></div>
+          <div class="chart-foot">
+            <button class="link-btn" type="button" data-table-toggle="market-table" aria-expanded="false" aria-controls="market-table">View data table</button>
+            <p class="chart-note">Source: Business Research Insights, Statista, Goldman Sachs.</p>
+          </div>
+          <div class="table-wrap" id="market-table" hidden></div>
+        </figure>
+
+        <div class="side-stack">
+          <div class="panel">
+            <h3 class="panel-h">Key growth drivers</h3>
+            <ul class="ticks ticks-tight">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg>More creators across every niche and platform</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg>Fans want deeper connections and direct support</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg>Digital payments and micro-transactions are mainstream</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3 class="panel-h">A huge, diverse audience</h3>
+            <ul class="audience">
+              <li><span class="aud-ico green"><svg class="ico" aria-hidden="true"><use href="#i-headphones"/></svg></span><b>Musicians</b><span>60M+</span></li>
+              <li><span class="aud-ico blue"><svg class="ico" aria-hidden="true"><use href="#i-pencil"/></svg></span><b>Writers</b><span>20M+</span></li>
+              <li><span class="aud-ico pink"><svg class="ico" aria-hidden="true"><use href="#i-palette"/></svg></span><b>Artists</b><span>40M+</span></li>
+              <li><span class="aud-ico violet"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span><b>Developers</b><span>30M+</span></li>
+              <li><span class="aud-ico amber"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg></span><b>Other creators</b><span>50M+</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p class="banner-strip"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg>
+        We're building the go-to platform for appreciation, connection and support in the creator economy.</p>
+    </div>
+  </section>
+  <!-- ============ END INVESTOR BLOCK ============ -->
+
+  <!-- ============ faq ============ -->
+  <section class="section" id="faq" aria-labelledby="faq-h">
+    <div class="container container-narrow">
+      <p class="kicker"><span class="num">07</span> Questions</p>
+      <h2 class="h2" id="faq-h">Good things to know</h2>
+
+      <div class="faq">
+        <details>
+          <summary>What exactly is a "Huggs"?</summary>
+          <p>A Huggs is a small cash gift — anything from $1 upwards — sent to a creator, optionally
+            with a message. It's a one-tap way to say "this was worth something to me".</p>
+        </details>
+        <details>
+          <summary>Do I need an account to send one?</summary>
+          <p>You can send a Huggs from a creator's link in a few taps. An account only becomes useful
+            when you want to keep a history, set up monthly support, or follow creators.</p>
+        </details>
+        <details>
+          <summary>What does it cost creators?</summary>
+          <p>A small transaction fee of 5–10% per Huggs, shown transparently before payout. Optional
+            premium tools and promotion are separate, and always opt-in.</p>
+        </details>
+        <details>
+          <summary>Is it safe?</summary>
+          <p>Payments are encrypted and processed through established payment providers. We don't store
+            raw card details, and supporter privacy settings are respected on every gift.</p>
+        </details>
+        <details>
+          <summary>Which countries are supported?</summary>
+          <p>The platform is built to work worldwide, with payout availability rolling out region by
+            region. Check the creator sign-up flow for the current list.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ cta ============ -->
+  <section class="cta" id="cta" aria-labelledby="cta-h">
+    <div class="container cta-inner">
+      <h2 id="cta-h">Every Huggs means a lot <svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></h2>
+      <p>Join the people making appreciation effortless. Send your first Huggs, or set up a page and
+        let your supporters find you.</p>
+      <form class="cta-form" novalidate>
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+        <button class="btn btn-dark btn-lg" type="submit">Get early access</button>
+      </form>
+      <p class="cta-note" id="cta-note" role="status">No spam. One email when we open your region.</p>
+    </div>
+  </section>
+</main>
+
+<!-- ============ footer ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#top">
+        <img class="brand-mark" src="assets/img/logo.svg" alt="" width="40" height="40" loading="lazy" decoding="async">
+        <span class="brand-text">
+          <span class="brand-name">Give me <span class="grad">Huggs</span></span>
+          <span class="brand-tag">Spreading love <svg class="ico ico-xs coral" aria-hidden="true"><use href="#i-heart"/></svg></span>
+        </span>
+      </a>
+      <p>Small cash gifts for the creators, artists, writers and developers whose work you enjoy.</p>
+    </div>
+
+    <nav aria-labelledby="f-product">
+      <h2 id="f-product">Product</h2>
+      <ul>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#creators">For creators</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-labelledby="f-company">
+      <h2 id="f-company">Company</h2>
+      <ul>
+        <li><a href="#market">Why now</a></li>
+        <li><a href="#model">Business model</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-labelledby="f-legal">
+      <h2 id="f-legal">Legal</h2>
+      <ul>
+        <li><a href="#">Terms of service</a></li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Cookie settings</a></li>
+        <li><a href="#">Community guidelines</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year">2026</span> Give me Huggs. All rights reserved.</p>
+    <p class="footer-fine">Figures shown in the business model and market sections are estimates and
+      forward-looking projections, not guarantees of performance.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

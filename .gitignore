@@ -1,0 +1,28 @@
+node_modules/
+dist/
+dist-ssr/
+
+# macOS
+.DS_Store
+
+# design references — WhatsApp screenshots, not used by the build
+giemehuggs/
+
+# local env / editor
+*.local
+.env
+.env.*
+!.env.example
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# personal Claude Code settings (.claude/settings.json is shared)
+.claude/settings.local.json
+
+# logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
