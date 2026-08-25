@@ -6,20 +6,20 @@ const STEPS = [
   {
     Icon: Search,
     accent: 'coral',
-    title: 'Find a creator',
-    body: 'Search by name or browse artists, writers, developers and musicians already on Huggs.',
+    title: 'Mention @huggs',
+    body: 'Type @huggs in the creator\u2019s YouTube, Twitch or Kick chat — or open the app and pick a creator directly. Either way, you get a payment link instantly.',
   },
   {
     Icon: Gift,
     accent: 'brandblue',
-    title: 'Pick your hugg',
-    body: 'Choose an amount — $2, $5, $20, or your own — and add a note if you want to say why.',
+    title: 'Send your hugg',
+    body: 'Choose a tier — $1, $5, $10 or $25 — add a note if you want to say why, and pay in one tap with Apple Pay, Google Pay or card. It’s a simple 5% fee, shown clearly before you pay.',
   },
   {
     Icon: HeartSolid,
     accent: 'coral',
-    title: 'They feel it',
-    body: 'The gift lands in their account straight away, with your note attached. No platform cut.',
+    title: 'They feel it, publicly',
+    body: 'The bot posts a shout-out in chat and your note lands with them straight away. We take a 5% fee — local-to-local huggs skip Stripe and FX fees too.',
   },
 ]
 
@@ -33,10 +33,10 @@ export default function HowItWorks() {
             How it works
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold text-navy sm:text-4xl">
-            Three taps from thankful to sent
+            From a mention to a moment of love
           </h2>
           <p className="mt-4 text-lg text-body">
-            No subscriptions, no tiers, no waiting for a payout window.
+            Simple pricing: a flat 5% fee per hugg. No monthly subscription, no payout waiting period.
           </p>
         </Reveal>
 

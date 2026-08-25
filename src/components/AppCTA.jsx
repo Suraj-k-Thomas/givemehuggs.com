@@ -4,9 +4,10 @@ import StoreButtons from './StoreButtons'
 import { Check, Sparkle } from './Icons'
 
 const REASONS = [
-  'Every cent of a hugg reaches the creator',
-  'Instant payouts — no monthly minimum',
+  'Simple 5% fee per hugg — no subscription',
+  'Local-to-local huggs skip Stripe and FX fees',
   'Your note travels with the gift',
+  'Creators own their fans\u2019 emails — we never use them for promotions',
   'Works on iOS and Android',
 ]
 
@@ -33,6 +34,10 @@ export default function AppCTA() {
                 </p>
 
                 <StoreButtons className="mt-8" />
+
+                <p className="mt-6 text-sm text-faint">
+                  Coming next: ecommerce, subscriptions and video hosting for creators.
+                </p>
               </div>
 
               <ul id="why-huggs" className="grid gap-4 scroll-mt-28">
