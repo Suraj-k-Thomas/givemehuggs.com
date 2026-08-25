@@ -21,7 +21,7 @@ export default function PhoneMockup({ unit = U_DEFAULT, className = '' }) {
         boxShadow: 'var(--shadow-phone)',
       }}
       role="img"
-      aria-label="The Give me Huggs app home screen, showing creators you can support and a Send Huggs button."
+      aria-label="The Give Me Huggs app home screen, showing creators you can support and a Send Huggs button."
     >
       {/* screen */}
       <div
@@ -65,7 +65,7 @@ export default function PhoneMockup({ unit = U_DEFAULT, className = '' }) {
                 Huggs sent with $5
               </b>
               <span className="text-faint" style={{ fontSize: u(1), lineHeight: 1.4 }}>
-                100% goes to the creator
+                95% goes to the creator — no FX on local sends
               </span>
             </div>
           </div>

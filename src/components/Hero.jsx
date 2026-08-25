@@ -4,7 +4,11 @@ import StoreButtons from './StoreButtons'
 import PhoneMockup from './app/PhoneMockup'
 import { HeartSolid, Check } from './Icons'
 
-const PROOF = ['No platform cut', 'Pay with Apple Pay or card', 'Free to join']
+const PROOF = [
+  'Just a 5% platform fee',
+  'Local-to-local Huggs skip Stripe + FX fees',
+  'Pay with Apple Pay or card',
+]
 
 /**
  * Copy left, app screen right, on plain white. The mockup floats on its own
@@ -38,8 +42,9 @@ export default function Hero() {
 
             <Reveal delay={0.12}>
               <p className="mt-5 text-lg leading-relaxed text-body">
-                Give me Huggs turns appreciation into a small cash gift. Pick an artist, writer,
-                developer or musician, send a hugg, and every cent reaches them.
+                Give Me Huggs replaces the tip jar with a relationship. Pick an artist, writer,
+                developer or musician, send a hugg, and most of it reaches them — local-to-local
+                Huggs skip Stripe and FX fees entirely.
               </p>
             </Reveal>
 

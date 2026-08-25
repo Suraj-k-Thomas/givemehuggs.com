@@ -5,7 +5,16 @@
       "Bash(gh auth *)",
       "Bash(git --version)",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(gh repo *)",
+      "Bash(gh api *)",
+      "Bash(gh run *)",
+      "Bash(gh workflow *)",
+      "Bash(curl -sI https://suraj-k-thomas.github.io/givemehuggs.com/)",
+      "Bash(dig +short givemehuggs.com A)",
+      "Bash(dig +short www.givemehuggs.com CNAME)",
+      "Bash(dig +short givemehuggs.com NS)",
+      "Bash(curl -sI http://givemehuggs.com)"
     ]
   }
 }

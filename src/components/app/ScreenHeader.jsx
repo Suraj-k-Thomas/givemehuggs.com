@@ -8,7 +8,7 @@ export default function ScreenHeader() {
       <Menu className="text-faint" style={{ width: u(1.6), height: u(1.6) }} />
 
       <span className="font-display font-bold tracking-tight" style={{ fontSize: u(1.5) }}>
-        <span className="text-coral">Give me </span>
+        <span className="text-coral">Give Me </span>
         <span className="text-brandblue">Huggs</span>
       </span>
 

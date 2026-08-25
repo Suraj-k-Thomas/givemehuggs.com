@@ -43,7 +43,7 @@ export default function Footer() {
           <div className="max-w-xs">
             <Logo size={40} showTagline />
             <p className="mt-4 text-sm leading-relaxed text-body">
-              Small cash gifts for the creators whose work you enjoy.
+              A relationship, not a receipt — for the creators whose work you enjoy.
             </p>
 
             <ul className="mt-6 flex items-center gap-2">
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-divider pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-faint">© {new Date().getFullYear()} Give me Huggs</p>
+          <p className="text-sm text-faint">© {new Date().getFullYear()} Give Me Huggs</p>
           <p className="text-sm text-faint">Made for creators, everywhere.</p>
         </div>
       </Container>

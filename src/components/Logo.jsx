@@ -27,7 +27,7 @@ export default function Logo({
       {showWordmark && (
         <span className="grid leading-none">
           <span className={`font-display font-bold tracking-tight ${wordmarkClass}`}>
-            <span className="text-coral">Give me </span>
+            <span className="text-coral">Give Me </span>
             <span className="text-brandblue">Huggs</span>
           </span>
 

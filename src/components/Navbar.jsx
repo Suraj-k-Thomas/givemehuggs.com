@@ -43,7 +43,7 @@ export default function Navbar() {
     >
       <Container>
         <nav className="flex h-[4.5rem] items-center justify-between gap-4">
-          <a href="#top" className="-m-1 p-1" aria-label="Give me Huggs, home">
+          <a href="#top" className="-m-1 p-1" aria-label="Give Me Huggs, home">
             <Logo size={38} />
           </a>
 
